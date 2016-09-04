@@ -1,0 +1,51 @@
+#!/bin/sh
+HTTPSQS_COMMAND="/usr/bin/httpsqs -d "
+
+if [ ! -z ${HTTPSQS_PARAM_L} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -l "${HTTPSQS_PARAM_L}
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_P} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -p "${HTTPSQS_PARAM_P}
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_X} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -x "${HTTPSQS_PARAM_X}
+else
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -x /data "
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_T} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -t "${HTTPSQS_PARAM_T}
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_S} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -s "${HTTPSQS_PARAM_S}
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_C} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -c "${HTTPSQS_PARAM_C}
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_M} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -m "${HTTPSQS_PARAM_M}
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_I} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -i "${HTTPSQS_PARAM_I}
+fi
+
+if [ ! -z ${HTTPSQS_PARAM_A} ] 
+then
+    HTTPSQS_COMMAND=${HTTPSQS_COMMAND}" -a "${HTTPSQS_PARAM_A}
+fi
+
+${HTTPSQS_COMMAND}
