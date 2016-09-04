@@ -1,10 +1,10 @@
 FROM alpine:latest
 MAINTAINER ety001 <ety001@domyself.me>
 RUN apk add --no-cache --update-cache bash alpine-sdk zlib-dev bzip2-dev bsd-compat-headers && mkdir /source \
-        && wget https://github.com/ety001/docker-httpsqs/raw/master/httpsqs-1.7.tar.gz -O /source/httpsqs-1.7.tar.gz \
-        && wget https://github.com/ety001/docker-httpsqs/raw/master/libevent-2.0.12-stable.tar.gz -O /source/libevent-2.0.12-stable.tar.gz \
-        && wget https://github.com/ety001/docker-httpsqs/raw/master/tokyocabinet-1.4.47.tar.gz -O /source/tokyocabinet-1.4.47.tar.gz \
-        && wget https://raw.githubusercontent.com/ety001/docker-httpsqs/master/run_httpsqs.sh -O /run_httpsqs.sh \
+        && wget https://github.com/ety001/docker-httpsqs/raw/master/src/httpsqs-1.7.tar.gz -O /source/httpsqs-1.7.tar.gz \
+        && wget https://github.com/ety001/docker-httpsqs/raw/master/src/libevent-2.0.12-stable.tar.gz -O /source/libevent-2.0.12-stable.tar.gz \
+        && wget https://github.com/ety001/docker-httpsqs/raw/master/src/tokyocabinet-1.4.47.tar.gz -O /source/tokyocabinet-1.4.47.tar.gz \
+        && wget https://raw.githubusercontent.com/ety001/docker-httpsqs/master/src/run_httpsqs.sh -O /run_httpsqs.sh \
         && chmod +x /run_httpsqs.sh \
         && tar zxf /source/libevent-2.0.12-stable.tar.gz -C /source \
         && tar zxf /source/tokyocabinet-1.4.47.tar.gz -C /source \
