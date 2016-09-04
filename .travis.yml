@@ -1,0 +1,8 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t "ety001/httpsqs:test" .
+  - docker images
+  - docker run --rm -t -i ety001/httpsqs:test
+  - docker ps
