@@ -4,5 +4,6 @@ services:
 before_install:
   - docker build -t "ety001/httpsqs:test" .
   - docker images
+script:
   - docker run --rm -t -i ety001/httpsqs:test
   - docker ps
