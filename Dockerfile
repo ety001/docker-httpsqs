@@ -11,5 +11,7 @@ RUN apk add --no-cache --update-cache bash alpine-sdk zlib-dev bzip2-dev bsd-com
         && cd /source/tokyocabinet-1.4.47 && ./configure --prefix=/usr/local/tokyocabinet-1.4.47/ && make && make install \
         && cd /source/httpsqs-1.7 && make && make install \
         && cd / && rm -rf /source \
-        && apk del alpine-sdk bsd-compat-headers
-CMD ["/bin/bash"]
+        && apk del alpine-sdk bsd-compat-headers \
+        && wget https://raw.githubusercontent.com/ety001/docker-httpsqs/master/run_httpsqs.sh -O /run_httpsqs.sh \
+        && chmod +x /run_httpsqs.sh
+CMD ["/run_httpsqs.sh"]
