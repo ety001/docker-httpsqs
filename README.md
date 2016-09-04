@@ -1,4 +1,7 @@
-# docker-httpsqs
+# docker-httpsqs 
+
+[![Build Status](https://travis-ci.org/ety001/docker-httpsqs.svg?branch=master)](https://travis-ci.org/ety001/docker-httpsqs)
+
 Docker for httpsqs. Detail: <http://code.google.com/p/httpsqs>
 
 ```

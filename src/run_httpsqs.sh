@@ -1,5 +1,5 @@
 #!/bin/sh
-HTTPSQS_COMMAND="/usr/bin/httpsqs -d "
+HTTPSQS_COMMAND="/usr/bin/httpsqs "
 
 if [ ! -z ${HTTPSQS_PARAM_L} ] 
 then
