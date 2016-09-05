@@ -1,5 +1,5 @@
+## Project Page: https://github.com/ety001/docker-httpsqs
 FROM alpine:latest
-MAINTAINER ety001 <ety001@domyself.me>
 RUN apk add --no-cache alpine-sdk zlib-dev bzip2-dev bsd-compat-headers && mkdir /source \
         && wget https://github.com/ety001/docker-httpsqs/raw/master/src/httpsqs-1.7.tar.gz -O /source/httpsqs-1.7.tar.gz \
         && wget https://github.com/ety001/docker-httpsqs/raw/master/src/libevent-2.0.12-stable.tar.gz -O /source/libevent-2.0.12-stable.tar.gz \
