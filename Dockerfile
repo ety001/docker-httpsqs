@@ -1,6 +1,7 @@
+## Project Page: https://github.com/ety001/docker-httpsqs
 FROM alpine:latest
 MAINTAINER ety001 <ety001@domyself.me>
-RUN apk add --no-cache --update-cache bash alpine-sdk zlib-dev bzip2-dev bsd-compat-headers && mkdir /source \
+RUN apk add --no-cache alpine-sdk zlib-dev bzip2-dev bsd-compat-headers && mkdir /source \
         && wget https://github.com/ety001/docker-httpsqs/raw/master/src/httpsqs-1.7.tar.gz -O /source/httpsqs-1.7.tar.gz \
         && wget https://github.com/ety001/docker-httpsqs/raw/master/src/libevent-2.0.12-stable.tar.gz -O /source/libevent-2.0.12-stable.tar.gz \
         && wget https://github.com/ety001/docker-httpsqs/raw/master/src/tokyocabinet-1.4.47.tar.gz -O /source/tokyocabinet-1.4.47.tar.gz \
@@ -13,5 +14,5 @@ RUN apk add --no-cache --update-cache bash alpine-sdk zlib-dev bzip2-dev bsd-com
         && cd /source/tokyocabinet-1.4.47 && ./configure --prefix=/usr/local/tokyocabinet-1.4.47/ && make && make install \
         && cd /source/httpsqs-1.7 && make && make install \
         && cd / && rm -rf /source \
-        && apk del alpine-sdk bsd-compat-headers bash
+        && apk del alpine-sdk bsd-compat-headers
 CMD ["/run_httpsqs.sh"]
