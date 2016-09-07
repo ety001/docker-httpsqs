@@ -1,6 +1,6 @@
 # docker-httpsqs 
 
-[![Build Status](https://travis-ci.org/ety001/docker-httpsqs.svg?branch=master)](https://travis-ci.org/ety001/docker-httpsqs)
+[![Build Status](https://travis-ci.org/ety001/docker-httpsqs.svg?branch=master)](https://travis-ci.org/ety001/docker-httpsqs) [![](https://images.microbadger.com/badges/image/ety001/httpsqs.svg)](http://microbadger.com/images/ety001/httpsqs "Get your own image badge on microbadger.com")
 
 Docker for httpsqs. Detail: <http://code.google.com/p/httpsqs>
 
@@ -24,36 +24,6 @@ Use command "killall httpsqs", "pkill httpsqs" and "kill `cat /tmp/httpsqs.pid`"
 Please note that don't use the command "pkill -9 httpsqs" and "kill -9 PID of httpsqs"!
 
 Please visit "http://code.google.com/p/httpsqs" for more help information.
-```
-
-# 使用手册
-
-### 拉取 docker
-
-```
-docker pull ety001/httpsqs
-```
-
-### 配置 httpsqs 参数
-
-通过设置 `docker` 的环境变量来设置 `httpsqs` 的参数，具体对应关系如下
-
-```
--l <ip_addr>  -- HTTPSQS_PARAM_L
--p <num>      -- HTTPSQS_PARAM_P
--x <path>     -- HTTPSQS_PARAM_X
--t <second>   -- HTTPSQS_PARAM_T
--s <second>   -- HTTPSQS_PARAM_S
--c <num>      -- HTTPSQS_PARAM_C
--m <size>     -- HTTPSQS_PARAM_M
--i <file>     -- HTTPSQS_PARAM_I
--a <auth>     -- HTTPSQS_PARAM_A
-```
-
-### 例子
-
-```
-docker run -d -e HTTPSQS_PARAM_A=123456 -e HTTPSQS_PARAM_P=8888 -p 8888:8888 ety001/httpsqs
 ```
 
 # Manual for docker-httpsqs
@@ -86,9 +56,36 @@ To set the docker environment to add params for `httpsqs`.
 docker run -d -e HTTPSQS_PARAM_A=123456 -e HTTPSQS_PARAM_P=8888 -p 8888:8888 ety001/httpsqs
 ```
 
+# 使用手册
+
+### 拉取 docker
+
+```
+docker pull ety001/httpsqs
+```
+
+### 配置 httpsqs 参数
+
+通过设置 `docker` 的环境变量来设置 `httpsqs` 的参数，具体对应关系如下
+
+```
+-l <ip_addr>  -- HTTPSQS_PARAM_L
+-p <num>      -- HTTPSQS_PARAM_P
+-x <path>     -- HTTPSQS_PARAM_X
+-t <second>   -- HTTPSQS_PARAM_T
+-s <second>   -- HTTPSQS_PARAM_S
+-c <num>      -- HTTPSQS_PARAM_C
+-m <size>     -- HTTPSQS_PARAM_M
+-i <file>     -- HTTPSQS_PARAM_I
+-a <auth>     -- HTTPSQS_PARAM_A
+```
+
+### 例子
+
+```
+docker run -d -e HTTPSQS_PARAM_A=123456 -e HTTPSQS_PARAM_P=8888 -p 8888:8888 ety001/httpsqs
+```
 
 ---
-
 [My Blog](http://www.domyself.me)
-
 [Donate](http://www.domyself.me/donate)
