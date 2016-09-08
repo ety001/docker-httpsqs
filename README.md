@@ -87,5 +87,4 @@ docker run -d -e HTTPSQS_PARAM_A=123456 -e HTTPSQS_PARAM_P=8888 -p 8888:8888 ety
 ```
 
 ---
-[My Blog](http://www.domyself.me)
-[Donate](http://www.domyself.me/donate)
+[My Blog](http://www.domyself.me) | [Donate](http://www.domyself.me/donate) | [License: BSD-3](https://opensource.org/licenses/BSD-3-Clause)
