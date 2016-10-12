@@ -14,5 +14,6 @@ RUN apk add --no-cache alpine-sdk zlib-dev bzip2-dev bsd-compat-headers && mkdir
         && cd /source/tokyocabinet-1.4.47 && ./configure --prefix=/usr/local/tokyocabinet-1.4.47/ && make && make install \
         && cd /source/httpsqs-1.7 && make && make install \
         && cd / && rm -rf /source \
-        && apk del alpine-sdk bsd-compat-headers
+        && apk del alpine-sdk bsd-compat-headers \
+        && ulimit -SHn 65535
 CMD ["/run_httpsqs.sh"]
